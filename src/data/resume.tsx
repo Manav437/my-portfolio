@@ -1,3 +1,4 @@
+import React from "react";
 import { Icons } from "@/components/icons";
 import { HomeIcon, FileTextIcon } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
@@ -262,5 +263,12 @@ export const DATA = {
             image: "/wip-img.png",
         },
     ],
-    hackathons: [],
+    hackathons: [] as {
+        title: string;
+        dates: string;
+        location?: string;
+        description?: string;
+        image?: string;
+        links?: { href: string; title: string; icon?: React.ReactNode }[];
+    }[],
 } as const;
