@@ -17,8 +17,7 @@ export const DATA = {
     url: "https://dillion.io",
     location: "New Delhi",
     // locationLink: "https://www.google.com/maps/place/sanfrancisco",
-    description:
-        "",
+    description: "",
     summary:
         "Final-year B.Tech student specializing in full-stack web development. Passionate about building performant, secure, and scalable products. Outside of code, I follow football, F1, and Valorant, and stay curious about what's next in tech.",
     avatarUrl: "/me.jpg",
@@ -32,11 +31,15 @@ export const DATA = {
         { name: "Postgres", icon: Postgresql },
         { name: "Tailwind CSS", icon: TailwindCSS },
         { name: "Github", icon: Github },
-        { name: "Supabase", icon: Supabase }
+        { name: "Supabase", icon: Supabase },
     ],
     navbar: [
         { href: "/", icon: HomeIcon, label: "Home" },
-        { href: "https://drive.google.com/file/d/1Evsf_aY-JlK26KUPMZ3l_LD-CB2gxqcn/view?usp=sharing", icon: FileTextIcon, label: "Resume" },
+        {
+            href: "https://drive.google.com/file/d/1Evsf_aY-JlK26KUPMZ3l_LD-CB2gxqcn/view?usp=sharing",
+            icon: FileTextIcon,
+            label: "Resume",
+        },
     ],
     contact: {
         email: "manav.gussain@gmail.com",
@@ -89,7 +92,7 @@ export const DATA = {
             start: "June 2025",
             end: "Aug 2025",
             description:
-                "Built responsive React interfaces from Figma designs and developed 20+ reusable components to improve development efficiency. Optimized frontend performance by refining state management and reducing unnecessary re-renders, resulting in faster load times and a smoother user experience."
+                "Built responsive React interfaces from Figma designs and developed 20+ reusable components to improve development efficiency. Optimized frontend performance by refining state management and reducing unnecessary re-renders, resulting in faster load times and a smoother user experience.",
         },
         // {
         //     company: "Shopify",
@@ -248,9 +251,7 @@ export const DATA = {
             active: false,
             description:
                 "A browser extension that brings custom emotes to GitHub — think 7TV but for PRs, issues, and code reviews. Type and react with custom emojis right inside GitHub discussions.",
-            technologies: [
-                "Browser Extension",
-            ],
+            technologies: ["Browser Extension"],
             links: [
                 // {
                 //     type: "Website",
@@ -261,4 +262,5 @@ export const DATA = {
             image: "/wip-img.png",
         },
     ],
+    hackathons: [],
 } as const;
