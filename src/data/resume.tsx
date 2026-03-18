@@ -17,8 +17,8 @@ export const DATA = {
     url: "https://dillion.io",
     location: "New Delhi",
     // locationLink: "https://www.google.com/maps/place/sanfrancisco",
-    // description:
-    //     "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    description:
+        "",
     summary:
         "Final-year B.Tech student specializing in full-stack web development. Passionate about building performant, secure, and scalable products. Outside of code, I follow football, F1, and Valorant, and stay curious about what's next in tech.",
     avatarUrl: "/me.jpg",
