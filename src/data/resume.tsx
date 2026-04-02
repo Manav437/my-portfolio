@@ -15,7 +15,7 @@ import { Supabase } from "@/components/ui/svgs/supabase";
 export const DATA = {
     name: "Manav Gusain",
     initials: "MG",
-    url: "https://dillion.io",
+    url: "https://manavtwt.vercel.app",
     location: "New Delhi",
     // locationLink: "https://www.google.com/maps/place/sanfrancisco",
     description: "",
@@ -64,7 +64,6 @@ export const DATA = {
                 name: "X",
                 url: "https://x.com/manav437",
                 icon: Icons.x,
-
                 navbar: true,
             },
             // Youtube: {
@@ -193,7 +192,7 @@ export const DATA = {
         },
         {
             title: "Team Tasks",
-            href: "team-tasks-ljps.vercel.app",
+            href: "https://team-tasks-ljps.vercel.app",
             active: true,
             description:
                 "A team task management app where managers can track their team's work in real time. Tasks support status tracking (Not Started, In Progress, Completed) and descriptions. Includes Gemini API integration to summarize a team's current workload at a glance.",
@@ -209,7 +208,7 @@ export const DATA = {
             links: [
                 {
                     type: "Website",
-                    href: "team-tasks-ljps.vercel.app",
+                    href: "https://team-tasks-ljps.vercel.app",
                     icon: <Icons.globe className="size-3" />,
                 },
                 {

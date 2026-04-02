@@ -1,4 +1,3 @@
- 
 import { ImageResponse } from "next/og";
 import { DATA } from "@/data/resume";
 
@@ -15,10 +14,16 @@ const getFontData = async () => {
     try {
         const [cabinetGrotesk, clashDisplay] = await Promise.all([
             fetch(
-                new URL("../../public/fonts/CabinetGrotesk-Medium.ttf", import.meta.url)
+                new URL(
+                    "../../public/fonts/CabinetGrotesk-Medium.ttf",
+                    import.meta.url,
+                ),
             ).then((res) => res.arrayBuffer()),
             fetch(
-                new URL("../../public/fonts/ClashDisplay-Semibold.ttf", import.meta.url)
+                new URL(
+                    "../../public/fonts/ClashDisplay-Semibold.ttf",
+                    import.meta.url,
+                ),
             ).then((res) => res.arrayBuffer()),
         ]);
         return { cabinetGrotesk, clashDisplay };
@@ -119,13 +124,19 @@ export default async function Image() {
                         <div style={styles.wrapper}>
                             {imageUrl && (
                                 <div style={styles.imageSection}>
-                                    <img src={imageUrl} alt={DATA.name} style={styles.image} />
+                                    <img
+                                        src={imageUrl}
+                                        alt={DATA.name}
+                                        style={styles.image}
+                                    />
                                 </div>
                             )}
                             <div style={styles.mainContainer}>
                                 <div style={styles.title}>{DATA.name}</div>
                                 {DATA.description && (
-                                    <div style={styles.description}>{DATA.description}</div>
+                                    <div style={styles.description}>
+                                        {DATA.description}
+                                    </div>
                                 )}
                             </div>
                         </div>
@@ -136,27 +147,27 @@ export default async function Image() {
                 ...size,
                 fonts: fontData
                     ? [
-                        {
-                            name: "Cabinet Grotesk",
-                            data: fontData.cabinetGrotesk,
-                            weight: 400,
-                            style: "normal",
-                        },
-                        {
-                            name: "Cabinet Grotesk",
-                            data: fontData.cabinetGrotesk,
-                            weight: 700,
-                            style: "normal",
-                        },
-                        {
-                            name: "Clash Display",
-                            data: fontData.clashDisplay,
-                            weight: 600,
-                            style: "normal",
-                        },
-                    ]
+                          {
+                              name: "Cabinet Grotesk",
+                              data: fontData.cabinetGrotesk,
+                              weight: 400,
+                              style: "normal",
+                          },
+                          {
+                              name: "Cabinet Grotesk",
+                              data: fontData.cabinetGrotesk,
+                              weight: 700,
+                              style: "normal",
+                          },
+                          {
+                              name: "Clash Display",
+                              data: fontData.clashDisplay,
+                              weight: 600,
+                              style: "normal",
+                          },
+                      ]
                     : undefined,
-            }
+            },
         );
     } catch (error) {
         console.error("Error generating OpenGraph image:", error);
@@ -164,9 +175,7 @@ export default async function Image() {
             `Failed to generate image: ${error instanceof Error ? error.message : "Unknown error"}`,
             {
                 status: 500,
-            }
+            },
         );
     }
 }
-
-
