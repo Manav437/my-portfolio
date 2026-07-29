@@ -25,11 +25,11 @@ export default function Page() {
                                 yOffset={8}
                                 text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
                             />
-                            {/* <BlurFadeText
+                             {/*<BlurFadeText
                                 className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
                                 delay={BLUR_FADE_DELAY}
                                 text={DATA.description}
-                            /> */}
+                            />*/}
                         </div>
                         <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
                             <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">

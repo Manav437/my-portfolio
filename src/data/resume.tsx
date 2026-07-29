@@ -20,7 +20,7 @@ export const DATA = {
     // locationLink: "https://www.google.com/maps/place/sanfrancisco",
     description: "",
     summary:
-        "Final-year B.Tech student specializing in full-stack web development. Passionate about building performant, secure, and scalable products. Outside of code, I follow football, F1, and Valorant, and stay curious about what's next in tech.",
+        "Software engineer specialising in full-stack web architecture with a heavy focus on performance, security, and scalability. Outside the IDE, I'm just a regular guy chasing rank in Valorant, keeping up with football, and tracking F1 race weekends.",
     avatarUrl: "/me.jpg",
     skills: [
         { name: "React", icon: ReactLight },
@@ -92,7 +92,7 @@ export const DATA = {
             start: "June 2025",
             end: "Aug 2025",
             description:
-                "Built responsive React interfaces from Figma designs and developed 20+ reusable components to improve development efficiency. Optimized frontend performance by refining state management and reducing unnecessary re-renders, resulting in faster load times and a smoother user experience.",
+                "Built responsive React interfaces from Figma designs and developed 20+ reusable components to improve development efficiency. Optimised frontend performance by refining state management and reducing unnecessary re-renders, resulting in faster load times and a smoother user experience.",
         },
         // {
         //     company: "Shopify",
@@ -171,7 +171,7 @@ export const DATA = {
             href: "https://0password.vercel.app",
             active: true,
             description:
-                "A zero-knowledge password manager with client-side AES-256-GCM encryption using the Web Crypto API — the server never sees your plaintext credentials. Master password stays on your device, always.",
+                "A zero-knowledge password manager with client-side AES-256-GCM encryption using the Web Crypto API - the server never sees your plaintext credentials. Master password stays on your device, always.",
             technologies: [
                 "Next.js",
                 "TypeScript",
@@ -195,7 +195,7 @@ export const DATA = {
             href: "https://team-tasks-ljps.vercel.app",
             active: true,
             description:
-                "A team task management app where managers can track their team's work in real time. Tasks support status tracking (Not Started, In Progress, Completed) and descriptions. Includes Gemini API integration to summarize a team's current workload at a glance.",
+                "A team task management app where managers can track their team's work in real time. Tasks support status tracking (Not Started, In Progress, Completed) and descriptions. Includes Gemini API integration to summarise a team's current workload at a glance.",
             technologies: [
                 "Next.js",
                 "TypeScript",
@@ -224,7 +224,7 @@ export const DATA = {
             href: "https://huddle-rosy-five.vercel.app/",
             active: true,
             description:
-                "A social media app where users can post updates, chat with others, and customize their profiles. Built with real-time data sync via Firebase Firestore for a seamless, live experience.",
+                "A social media app where users can post updates, chat with others, and customise their profiles. Built with real-time data sync via Firebase Firestore for a seamless, live experience.",
             technologies: [
                 "React",
                 "Vite",
@@ -246,11 +246,27 @@ export const DATA = {
             image: "/huddle.png",
         },
         {
+            title: "Off-Brand",
+            href: "https://off-brand-sigma.vercel.app/",
+            active: true,
+            description:
+                "A clean, animated landing page built to practise modern frontend fundamentals. Focuses on smooth UI animations and responsive layout.",
+            technologies: ["Next.js", "TypeScript", "TailwindCSS"],
+            links: [
+                {
+                    type: "Website",
+                    href: "https://off-brand-sigma.vercel.app/",
+                    icon: <Icons.globe className="size-3" />,
+            },
+            ],
+            image: "/off-brand.png",
+        },
+        {
             title: "7TV for GitHub",
             href: "",
             active: false,
             description:
-                "A browser extension that brings custom emotes to GitHub — think 7TV but for PRs, issues, and code reviews. Type and react with custom emojis right inside GitHub discussions.",
+                "A browser extension that brings custom emotes to GitHub - think 7TV but for PRs, issues, and code reviews. Type and react with custom emojis right inside GitHub discussions.",
             technologies: ["Browser Extension"],
             links: [
                 // {
