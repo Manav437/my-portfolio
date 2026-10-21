@@ -20,7 +20,7 @@ export const DATA = {
     // locationLink: "https://www.google.com/maps/place/sanfrancisco",
     description: "",
     summary:
-        "Software engineer specialising in full-stack web architecture with a heavy focus on performance, security, and scalability. Outside the IDE, I'm just a regular guy chasing rank in Valorant, keeping up with football, and tracking F1 race weekends.",
+        "Software engineer specialising in full-stack web development with focus on performance, security, and scalability. Outside the IDE, I'm just a regular guy chasing rank in Valorant, keeping up with football, and tracking F1 race weekends.",
     avatarUrl: "/me.jpg",
     skills: [
         { name: "React", icon: ReactLight },
@@ -37,7 +37,7 @@ export const DATA = {
     navbar: [
         { href: "/", icon: HomeIcon, label: "Home" },
         {
-            href: "https://drive.google.com/file/d/1emMvij0SWyl5AgEZlLGVekLKVv1q5ZrV/view?usp=sharing",
+            href: "https://drive.google.com/file/d/1brCeWP_fJFSdTKBrD32RTWGRGlmCZl9B/view?usp=drive_link",
             icon: FileTextIcon,
             label: "Resume",
         },
@@ -219,32 +219,32 @@ export const DATA = {
             ],
             image: "/team-tasks.png",
         },
-        {
-            title: "Huddle",
-            href: "https://huddle-rosy-five.vercel.app/",
-            active: true,
-            description:
-                "A social media app where users can post updates, chat with others, and customise their profiles. Built with real-time data sync via Firebase Firestore for a seamless, live experience.",
-            technologies: [
-                "React",
-                "Vite",
-                "TailwindCSS",
-                "Firebase Firestore",
-            ],
-            links: [
-                {
-                    type: "Website",
-                    href: "https://huddle-rosy-five.vercel.app",
-                    icon: <Icons.globe className="size-3" />,
-                },
-                {
-                    type: "Source",
-                    href: "https://github.com/Manav437/Huddle",
-                    icon: <Icons.github className="size-3" />,
-                },
-            ],
-            image: "/huddle.png",
-        },
+        // {
+        //     title: "Huddle",
+        //     href: "https://huddle-rosy-five.vercel.app/",
+        //     active: true,
+        //     description:
+        //         "A social media app where users can post updates, chat with others, and customise their profiles. Built with real-time data sync via Firebase Firestore for a seamless, live experience.",
+        //     technologies: [
+        //         "React",
+        //         "Vite",
+        //         "TailwindCSS",
+        //         "Firebase Firestore",
+        //     ],
+        //     links: [
+        //         {
+        //             type: "Website",
+        //             href: "https://huddle-rosy-five.vercel.app",
+        //             icon: <Icons.globe className="size-3" />,
+        //         },
+        //         {
+        //             type: "Source",
+        //             href: "https://github.com/Manav437/Huddle",
+        //             icon: <Icons.github className="size-3" />,
+        //         },
+        //     ],
+        //     image: "/huddle.png",
+        // },
         {
             title: "Off-Brand",
             href: "https://off-brand-sigma.vercel.app/",
@@ -257,7 +257,7 @@ export const DATA = {
                     type: "Website",
                     href: "https://off-brand-sigma.vercel.app/",
                     icon: <Icons.globe className="size-3" />,
-            },
+                },
             ],
             image: "/off-brand.png",
         },

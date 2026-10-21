@@ -33,13 +33,14 @@ const getFontData = async () => {
     }
 };
 
+
 const styles = {
     outerWrapper: {
         height: "100%",
         width: "100%",
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "#ffffff",
+        backgroundColor: "#2c2c2c",
         position: "relative",
     },
     middleWrapper: {
@@ -47,7 +48,7 @@ const styles = {
         width: "100%",
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "#ffffff",
+        backgroundColor: "#2c2c2c",
         position: "relative",
         padding: "40px",
     },
@@ -56,10 +57,10 @@ const styles = {
         width: "100%",
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "#fafafa",
+        backgroundColor: "#333333",
         position: "relative",
         padding: "40px",
-        border: "1px solid #e5e5e5",
+        border: "1px solid #484848",
         borderRadius: "12px",
     },
     imageSection: {
@@ -84,7 +85,7 @@ const styles = {
         width: "140px",
         height: "140px",
         borderRadius: "24px",
-        border: "4px solid #e5e5e5",
+        border: "4px solid #484848",
         objectFit: "cover",
     },
     title: {
@@ -93,22 +94,24 @@ const styles = {
         fontWeight: "600",
         lineHeight: "1.1",
         textAlign: "left",
-        color: "#000000",
+        color: "#f5f5f5",
         marginBottom: "16px",
         letterSpacing: "-0.02em",
         maxWidth: "900px",
     },
     description: {
+        fontFamily: "Cabinet Grotesk",
         fontSize: "20px",
         fontWeight: "400",
         lineHeight: "1.5",
         textAlign: "left",
         maxWidth: "800px",
-        color: "#404040",
+        color: "#c4c4c4",
         marginBottom: "32px",
         textWrap: "balance",
     },
 } as const;
+
 
 export default async function Image() {
     try {
@@ -147,25 +150,25 @@ export default async function Image() {
                 ...size,
                 fonts: fontData
                     ? [
-                          {
-                              name: "Cabinet Grotesk",
-                              data: fontData.cabinetGrotesk,
-                              weight: 400,
-                              style: "normal",
-                          },
-                          {
-                              name: "Cabinet Grotesk",
-                              data: fontData.cabinetGrotesk,
-                              weight: 700,
-                              style: "normal",
-                          },
-                          {
-                              name: "Clash Display",
-                              data: fontData.clashDisplay,
-                              weight: 600,
-                              style: "normal",
-                          },
-                      ]
+                        {
+                            name: "Cabinet Grotesk",
+                            data: fontData.cabinetGrotesk,
+                            weight: 400,
+                            style: "normal",
+                        },
+                        {
+                            name: "Cabinet Grotesk",
+                            data: fontData.cabinetGrotesk,
+                            weight: 700,
+                            style: "normal",
+                        },
+                        {
+                            name: "Clash Display",
+                            data: fontData.clashDisplay,
+                            weight: 600,
+                            style: "normal",
+                        },
+                    ]
                     : undefined,
             },
         );
