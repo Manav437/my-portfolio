@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
@@ -54,14 +55,42 @@ export function ProjectCard({
     links,
     className,
 }: Props) {
+    const [isHovered, setIsHovered] = useState(false);
+    const [isFocused, setIsFocused] = useState(false);
+    const showPixels = isHovered || isFocused;
+
     return (
         <div
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onFocusCapture={() => setIsFocused(true)}
+            onBlurCapture={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) {
+                    setIsFocused(false);
+                }
+            }}
             className={cn(
-                "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200",
+                "relative isolate flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200",
                 className
             )}
         >
-            <div className="relative shrink-0">
+            {showPixels && (
+                <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-16 motion-reduce:hidden"
+                >
+                    <FlickeringGrid
+                        squareSize={2}
+                        gridGap={2}
+                        className="h-full w-full"
+                        style={{
+                            maskImage: "linear-gradient(to top, black, transparent)",
+                            WebkitMaskImage: "linear-gradient(to top, black, transparent)",
+                        }}
+                    />
+                </div>
+            )}
+            <div className="relative z-10 shrink-0">
                 <Link
                     href={href || "#"}
                     target="_blank"
@@ -105,7 +134,7 @@ export function ProjectCard({
                     </div>
                 )}
             </div>
-            <div className="p-6 flex flex-col gap-3 flex-1">
+            <div className="relative z-10 p-6 flex flex-col gap-3 flex-1">
                 <div className="flex items-start justify-between gap-2">
                     <div className="flex flex-col gap-1">
                         <h3 className="font-semibold">{title}</h3>

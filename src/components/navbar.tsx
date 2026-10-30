@@ -11,19 +11,21 @@ import { DATA } from "@/data/resume";
 
 export default function Navbar() {
     return (
-        <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30">
-            <Dock className="z-50 pointer-events-auto relative h-14 p-2 w-fit mx-auto flex gap-2 border bg-card/90 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5">
+        <div className="pointer-events-none fixed inset-x-0 bottom-[max(1rem,env(safe-area-inset-bottom))] z-30 px-3">
+            <Dock className="pointer-events-auto relative h-14 w-fit gap-1 border-border/70 bg-card/80 p-1.5 shadow-[0_8px_32px_-12px_rgba(0,0,0,0.3)] backdrop-blur-xl">
                 {DATA.navbar.map((item) => {
                     const isExternal = item.href.startsWith("http");
                     return (
                         <Tooltip key={item.href}>
                             <TooltipTrigger asChild>
                                 <a
+                                    aria-label={item.label}
+                                    className="group rounded-full outline-none focus-visible:ring-2 focus-visible:ring-ring"
                                     href={item.href}
                                     target={isExternal ? "_blank" : undefined}
                                     rel={isExternal ? "noopener noreferrer" : undefined}
                                 >
-                                    <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
+                                    <DockIcon className="text-muted-foreground transition-colors duration-150 hover:bg-muted hover:text-foreground group-focus-visible:bg-muted group-focus-visible:text-foreground">
                                         <item.icon className="size-full rounded-sm overflow-hidden object-contain" />
                                     </DockIcon>
                                 </a>
@@ -52,11 +54,13 @@ export default function Navbar() {
                             <Tooltip key={`social-${name}-${index}`}>
                                 <TooltipTrigger asChild>
                                     <a
+                                        aria-label={name}
+                                        className="group rounded-full outline-none focus-visible:ring-2 focus-visible:ring-ring"
                                         href={social.url}
                                         target={isExternal ? "_blank" : undefined}
                                         rel={isExternal ? "noopener noreferrer" : undefined}
                                     >
-                                        <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
+                                        <DockIcon className="text-muted-foreground transition-colors duration-150 hover:bg-muted hover:text-foreground group-focus-visible:bg-muted group-focus-visible:text-foreground">
                                             <IconComponent className="size-full rounded-sm overflow-hidden object-contain" />
                                         </DockIcon>
                                     </a>
@@ -78,9 +82,7 @@ export default function Navbar() {
                 />
                 <Tooltip>
                     <TooltipTrigger asChild>
-                        <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
-                            <ModeToggle className="size-full cursor-pointer" />
-                        </DockIcon>
+                        <ModeToggle className="size-10 cursor-pointer text-muted-foreground hover:text-foreground" />
                     </TooltipTrigger>
                     <TooltipContent
                         side="top"

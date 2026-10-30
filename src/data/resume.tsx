@@ -1,16 +1,15 @@
 import React from "react";
 import { Icons } from "@/components/icons";
-import { HomeIcon, FileTextIcon } from "lucide-react";
+import { HomeIcon, FileTextIcon, Database } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Typescript } from "@/components/ui/svgs/typescript";
 import { Nodejs } from "@/components/ui/svgs/nodejs";
 import { Express } from "@/components/ui/svgs/expressjs";
 import { MongoDB } from "@/components/ui/svgs/mongodb";
-import { Postgresql } from "@/components/ui/svgs/postgresql";
+import { Javascript } from "@/components/ui/svgs/javascript";
 import { TailwindCSS } from "@/components/ui/svgs/tailwindcss";
 import { Github } from "@/components/ui/svgs/github";
-import { Supabase } from "@/components/ui/svgs/supabase";
 
 export const DATA = {
     name: "Manav Gusain",
@@ -25,14 +24,14 @@ export const DATA = {
     skills: [
         { name: "React", icon: ReactLight },
         { name: "Next.js", icon: NextjsIconDark },
+        { name: "JavaScript", icon: Javascript },
         { name: "Typescript", icon: Typescript },
         { name: "Node.js", icon: Nodejs },
         { name: "Express.js", icon: Express },
         { name: "MongoDB", icon: MongoDB },
-        { name: "Postgres", icon: Postgresql },
+        { name: "SQL", icon: Database },
         { name: "Tailwind CSS", icon: TailwindCSS },
         { name: "Github", icon: Github },
-        { name: "Supabase", icon: Supabase },
     ],
     navbar: [
         { href: "/", icon: HomeIcon, label: "Home" },
@@ -167,6 +166,35 @@ export const DATA = {
     ],
     projects: [
         {
+            title: "Pubby",
+            href: "https://pubby-mu.vercel.app",
+            active: true,
+            description:
+                "A music-sharing app where friends drop YouTube song links into a shared room and listen together in sync. Everyone can add tracks to the queue and chat in real time, while the host controls playback. Just share a room link to get started - no account needed.",
+            technologies: [
+                "Next.js",
+                "TypeScript",
+                "React",
+                "Supabase",
+                "PostgreSQL",
+                "TailwindCSS",
+                "YouTube IFrame API",
+            ],
+            links: [
+                {
+                    type: "Website",
+                    href: "https://pubby-mu.vercel.app",
+                    icon: <Icons.globe className="size-3" />,
+                },
+                {
+                    type: "Source",
+                    href: "https://github.com/Manav437/pubby",
+                    icon: <Icons.github className="size-3" />,
+                },
+            ],
+            image: "/pubby.jpg",
+        },
+        {
             title: "0Password",
             href: "https://0password.vercel.app",
             active: true,
@@ -246,7 +274,7 @@ export const DATA = {
         //     image: "/huddle.png",
         // },
         {
-            title: "Off-Brand",
+            title: "Off Brand",
             href: "https://off-brand-sigma.vercel.app/",
             active: true,
             description:
@@ -261,22 +289,22 @@ export const DATA = {
             ],
             image: "/off-brand.png",
         },
-        {
-            title: "7TV for GitHub",
-            href: "",
-            active: false,
-            description:
-                "A browser extension that brings custom emotes to GitHub - think 7TV but for PRs, issues, and code reviews. Type and react with custom emojis right inside GitHub discussions.",
-            technologies: ["Browser Extension"],
-            links: [
-                // {
-                //     type: "Website",
-                //     href: "",
-                //     icon: <Icons.globe className="size-3" />,
-                // },
-            ],
-            image: "/wip-img.png",
-        },
+        // {
+        //     title: "7TV for GitHub",
+        //     href: "",
+        //     active: false,
+        //     description:
+        //         "A browser extension that brings custom emotes to GitHub - think 7TV but for PRs, issues, and code reviews. Type and react with custom emojis right inside GitHub discussions.",
+        //     technologies: ["Browser Extension"],
+        //     links: [
+        //         // {
+        //         //     type: "Website",
+        //         //     href: "",
+        //         //     icon: <Icons.globe className="size-3" />,
+        //         // },
+        //     ],
+        //     image: "/wip-img.png",
+        // },
     ],
     hackathons: [] as {
         title: string;
