@@ -78,7 +78,7 @@ export default function Page() {
                                 <Link
                                     href={education.href}
                                     // target="_blank"
-                                    rel="noopener noreferrer"
+                                    // rel="noopener noreferrer"
                                     className="flex items-center gap-x-3 justify-between group"
                                 >
                                     <div className="flex items-center gap-x-3 flex-1 min-w-0">
@@ -94,7 +94,7 @@ export default function Page() {
                                         <div className="flex-1 min-w-0 flex flex-col gap-0.5">
                                             <div className="font-semibold leading-none flex items-center gap-2">
                                                 {education.school}
-                                                <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" aria-hidden />
+                                                {/*<ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" aria-hidden />*/}
                                             </div>
                                             <div className="font-sans text-sm text-muted-foreground">
                                                 {education.degree}

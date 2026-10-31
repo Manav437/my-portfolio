@@ -36,7 +36,7 @@ export const DATA = {
     navbar: [
         { href: "/", icon: HomeIcon, label: "Home" },
         {
-            href: "https://drive.google.com/file/d/1brCeWP_fJFSdTKBrD32RTWGRGlmCZl9B/view?usp=drive_link",
+            href: "https://drive.google.com/file/d/12iCz9vniN8nmIK9A7MaVhVApBSy260XD/view?usp=sharing",
             icon: FileTextIcon,
             label: "Resume",
         },
@@ -192,7 +192,7 @@ export const DATA = {
                     icon: <Icons.github className="size-3" />,
                 },
             ],
-            image: "/pubby.jpg",
+            image: "/pubby.png",
         },
         {
             title: "0Password",
